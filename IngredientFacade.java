@@ -33,30 +33,30 @@ import javax.naming.*;
 public class IngredientFacade {
     private static IngredientFacade singleton;
 
-    private IngredientDataAccess dao;
+    private WorkoutDataAccess dao;
 
-    private IngredientFacade () throws NamingException, SQLException {
-         this.dao = IngredientDataAccess.getInstance();
+    private Workoutfacade () throws NamingException, SQLException {
+         this.dao = WorkoutDataAccess.getInstance();
 
     }
 
-    public static IngredientFacade getInstance() throws NamingException, SQLException {
+    public static WorkoutFacade getInstance() throws NamingException, SQLException {
 
 
         if(singleton == null)
-             singleton = new IngredientFacade();
+             singleton = new WorkoutFacade();
 
         return singleton;
     }
 
 
 
-    public Ingredient[] getIngredients () throws SQLException {
+    public Workoutuser[] getUser () throws SQLException {
 
         Connection con = dao.getConnection();
         
 
-        PreparedStatement stmt=con.prepareStatement("SELECT id, name, category, quantity FROM ingredient");
+        PreparedStatement stmt=con.prepareStatement("SELECT id, name, category, quantity FROM workoutdatabase");
 		
 
 	ResultSet rs = stmt.executeQuery();
@@ -65,11 +65,12 @@ public class IngredientFacade {
         int count= 0;
         
         while(rs.next()) {
-            int theId = rs.getInt("id");
-            String theName = rs.getString("name");
-            String theCategory = rs.getString("category");
-            String theQuantity = rs.getString("quantity");
-            Ingredient ing = new Ingredient(theId, theName, theCategory, theQuantity);
+           int  = rs.getInt("id");
+            String Name = rs.getString("name");
+	    String Age = rs.getString("age");    
+            double Weight = rs.getString("weight");
+            double Height = rs.getString("height");
+            Ingredient ing = new Ingredient(theId, Name, Age, Weight, Height);
             ingArray[count] = ing;
             count++;
        }
@@ -88,19 +89,20 @@ public class IngredientFacade {
             
             Connection con = dao.getConnection();
 
-            PreparedStatement stmt=con.prepareStatement("SELECT id, name, category, quantity FROM ingredient WHERE name=?");
-	    stmt.setString(1,theName);
+            PreparedStatement stmt=con.prepareStatement("SELECT id, Name, Age, Weight, Height FROM workout WHERE name=?");
+	    stmt.setString(1,Name);
 	    ResultSet rs = stmt.executeQuery();
 
             Ingredient[] ingArray = new Ingredient[100];
             int count= 0;
 
             while(rs.next()) {
-            int theId3 = rs.getInt("id");
-            String theName3 = rs.getString("name");
-            String theCategory3 = rs.getString("category");
-            String theQuantity3 = rs.getString("quantity");
-            Ingredient ing = new Ingredient(theId3, theName3, theCategory3,theQuantity3);
+            int  = rs.getInt("id");
+            String Name = rs.getString("name");
+	    String Age = rs.getString("age");    
+            double Weight = rs.getString("weight");
+            double Height = rs.getString("height");
+            Ingredient ing = new Ingredient(theId3, Name3, Age3,Weight3, Height3);
             ingArray[count] = ing;
             count++;
        }
@@ -118,7 +120,7 @@ public class IngredientFacade {
         
         Connection con = dao.getConnection();
 
-        PreparedStatement stmt=con.prepareStatement("SELECT id, name, category,quantity FROM ingredient WHERE id=?");		
+        PreparedStatement stmt=con.prepareStatement("SELECT id, Name FROM Workout WHERE id=?");		
 	
         stmt.setInt(1,theId);
 	ResultSet rs = stmt.executeQuery();
@@ -127,11 +129,12 @@ public class IngredientFacade {
         int count= 0;
         
         while(rs.next()) {
-            int theId2 = rs.getInt("id");
-            String theName2 = rs.getString("name");
-            String theCategory2 = rs.getString("category");
-            String theQuantity2 = rs.getString("quantity");
-            Ingredient ing = new Ingredient(theId2, theName2, theCategory2, theQuantity2);
+	    int theId2 = rs1.getInt("id");
+ 	    String Name2 = rs.getString("name");
+	    String Age2 = rs.getString("age");    
+            double Weight2 = rs.getString("weight");
+            double Height2 = rs.getString("height");
+            Ingredient ing = new Ingredient(theId2, Name3, Age3, Weight3, Height3);
             ingArray[count] = ing;
             count++;
        }
@@ -145,11 +148,11 @@ public class IngredientFacade {
 
     }
 
-    public Ingredient[] createIngredient(Ingredient theIngredientToAdd) throws SQLException, ClassNotFoundException {
+    public Workout[] createuser(Workout UsertoAdd) throws SQLException, ClassNotFoundException {
 
        Connection con = dao.getConnection();
 
-       PreparedStatement stmt=con.prepareStatement("INSERT INTO ingredient (name, category,quantity) VALUE (?,?,?)");
+       PreparedStatement stmt=con.prepareStatement("INSERT INTO Workout (name, category,quantity) VALUE (?,?,?)");
        stmt.setString(1,theIngredientToAdd.getname());
        stmt.setString(2,theIngredientToAdd.getcategory());
        stmt.setString(3,theIngredientToAdd.getquantity());
@@ -159,9 +162,9 @@ public class IngredientFacade {
        String result ="";
 	  int count=0;
 	  int MAX=100;
-          Ingredient[] ingArray = new Ingredient[MAX];
+          Workoutuser[] ingArray = new Workoutuser[MAX];
        
-          PreparedStatement retrieveStmt= con.prepareStatement("Select * from ingredient WHERE name=? and category=? and quantity=?");
+          PreparedStatement retrieveStmt= con.prepareStatement("Select * from Workout WHERE name=? and category=? and quantity=?");
 	  retrieveStmt.setString(1, theIngredientToAdd.getname());
 	  retrieveStmt.setString(2, theIngredientToAdd.getcategory());
           retrieveStmt.setString(3, theIngredientToAdd.getquantity());

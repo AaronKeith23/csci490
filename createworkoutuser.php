@@ -89,7 +89,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
         $hashpassword = password_hash($formdata['password'], PASSWORD_BCRYPT);
         //Insert the user into the database
         try{
-            $sql = "INSERT INTO workouttaccount (firstname, lastname, username, email, password) VALUES (:firstname, :lastname, :username, :email, :password) ";
+            $sql = "INSERT INTO workoutaccount (firstname, lastname, username, email, password) VALUES (:firstname, :lastname, :username, :email, :password) ";
             $stmt = $pdo->prepare($sql);
             $stmt->bindValue(':firstname', $formdata['firstname']);
             $stmt->bindValue(':lastname', $formdata['lastname']);

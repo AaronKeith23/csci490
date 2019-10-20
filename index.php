@@ -14,7 +14,7 @@ include_once "header.php";
 
 <h2>Welcome to Aaron and Zhuowei's Workout Website</h2>
 <img src="images/ccu.jpg" alt="College" class="center">
-<p>Take your time and Create your Account and get started</p>
+<p>Don't wait on Starting on your goals. Create an account and get started!</p>
 <?php
 "<br></br>";
 require_once "footer.php";

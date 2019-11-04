@@ -15,8 +15,9 @@ $currentfile = "";
     if(!isset($_SESSION['username'])){echo "<li><a href='login.php'>Login</a></li>";}
     if(isset($_SESSION['username'])){echo "<li><a href='logout.php'>Logout</a></li>";}
     echo ($currentfile == "createworkoutuser.php") ? "<li>Create New Account</li>" : "<li><a href='createworkoutuser.php'>Create New Students Account</a></li>";
-    if(isset($_SESSION['username'])){echo "<li><a href='storage.php'>Upload A File</a></li>";}
-    if(isset($_SESSION['username'])){echo "<li><a href='insertedfiles.php'>Assignments</a></li>";}
+    if(isset($_SESSION['username'])){echo "<li><a href='displayarmworkout.php'>Arm Workouts</a></li>";}
+    if(isset($_SESSION['username'])){echo "<li><a href='displaychestworkout.php'>Chest Workouts</a></li>";}
+    if(isset($_SESSION['username'])){echo "<li><a href='displaylegworkout.php'>Leg Workouts</a></li>";}
     ?>
 </ul>
 </div>

@@ -30,7 +30,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
         //confirm the account is correct
         try
         {
-            $sqlusers = "SELECT * FROM studentaccount WHERE username = :username";
+            $sqlusers = "SELECT * FROM workacount WHERE username = :username";
             $stmtusers = $pdo->prepare($sqlusers);
             $stmtusers->bindValue(':username', $formdata['username']);
             $stmtusers->execute();

@@ -16,10 +16,10 @@ try{
     <?php
     echo "<table>
             <h2>User Workout Plan</h2>
-            <tr><th>Workout Name</th><th>Total Reps</th><th>Number of Sets</th></tr>";
+            <tr><th>Workout Name</th><th>Total Reps</th><th>Number of Sets</th><th>Calories</th></tr>";
     //loop through the results and display to the screen
     foreach ($result as $row){
-        echo "<tr><td>{$row['workoutname']}</td><td>" .$row['reps']."</td><td>{$row['sets']}</td><td>"; "</tr>";
+        echo "<tr><td>{$row['workoutname']}</td><td>" .$row['reps']."</td><td>" .$row['sets']."</td><td>{$row['calories']}</td><td>"; "</tr>";
     }
     echo "</table>";
 }

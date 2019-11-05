@@ -99,7 +99,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
             $stmt->execute();
             $showform =0;
             echo "<p class='good'>Congratulations, Your Account was Successfully created!</p>";
-            echo "<p class='good'>Please Login and Upload Your Assignment!</p>";
+            echo "<p class='good'>Please Login and Choose Your Workout</p>";
         }
         catch (PDOException $e) {
             die( $e->getMessage() );

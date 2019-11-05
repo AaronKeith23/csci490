@@ -1,5 +1,5 @@
 <?php
-require_once 'function.php';?>
+require_once 'header.php';?>
 <!DOCTYPE html>
 <html>
 <head>

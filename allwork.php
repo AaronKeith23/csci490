@@ -1,5 +1,5 @@
 <?php
-require_once 'connection.php';
+require_once 'header.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -20,12 +20,12 @@ require_once 'connection.php';
     </style>
 </head>
 <body>
-<a href="adduser.html">Add workout</a>
+<a href="addworkout.php">Add workout</a>
 <table>
     <tr><th>id</th><th>WorkName</th><th>Calorielist</th><th>Edit/Delete</th></tr>
     <?php
     //connect database
-    connnetDb();
+    //connnetDb();
     //Query all the data in the data table, and according to the descending order id
     $result=$pdo->query("SELECT * FROM workout ORDER BY id DESC");
     $result_count =  $pdo->query("SELECT COUNT(*) FROM workout" );

@@ -1,5 +1,5 @@
 <?php
-require_once 'connection.php';
+require_once 'header.php';
 if(empty($_POST['id'])){
     die('id is empty');
 }
@@ -17,7 +17,7 @@ $name=$_POST['name'];
 
 
 //connect to database
-connnetDb();
+//connnetDb();
 
 //edit data
 try{
@@ -26,3 +26,5 @@ try{
     die( $e->getMessage() );
 }
 header("Location:allwork.php");
+
+?>

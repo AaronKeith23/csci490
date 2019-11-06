@@ -15,7 +15,7 @@ require_once "functions.php";
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title>Aaron's University</title>
+    <title>Workout Website</title>
     <link rel="stylesheet" href="stylesheet.css" />
 </head>
 <body>

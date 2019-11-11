@@ -6,4 +6,4 @@
  * Time: 6:55 PM
  */
 
-echo "Aaron Keith University";
+echo "A and Z Workout Program";

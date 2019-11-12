@@ -1,3 +1,9 @@
+
+
+
+
+
+
 <?php
 
 /**
@@ -14,9 +20,26 @@
 
 $pagetitle = "Display Arm Workout";
 
+
 include_once "header.php";
+?>
+<html>
+<head>
+    <title>Homepage</title>
+</head>
 
+<body>
+<a href="add.html">Add New Armworkout</a><br/><br/>
 
+<table width='80%' border=0>
+
+    <tr bgcolor='#CCCCCC'>
+        <td>Workoutname</td>
+        <td>reps</td>
+        <td>sets</td>
+        <td>Action</td>
+    </tr>
+<?php
 
 try{
 
@@ -55,5 +78,8 @@ catch (PDOException $e)
     die( $e->getMessage() );
 
 }
-
 require_once "footer.php";
+
+?>
+
+

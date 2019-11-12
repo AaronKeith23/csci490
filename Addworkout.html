@@ -1,14 +1,24 @@
-<!DOCTYPE html>
 <html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>Add Workout</title>
+<head>
+    <title>Add new workout</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<form action="addworkout.php" method="post">
-    <label>WorkoutName：</label><input type="text" name="name">
-    <label>Calorielist：</label><input type="text" name="calorielist">
-    <input type="submit" value="Submit">
-</form>
-</body>
-</html>
+
+<div id="main">
+    <h1>Add new workout</h1>
+    <div id="">
+        <h2>Workout's Form</h2>
+        <hr/>
+        <form action="" method="post">
+            <label>Workout Name :</label>
+            <input type="text" name="workoutname" id="workoutname" required="required" placeholder="Please Enter Name"/><br /><br />
+            <label>Workout reps :</label>
+            <input type="text" name="reps" id="reps" required="required" placeholder=">1"/><br/><br />
+            <label>Workout sets :</label>
+            <input type="text" name="sets" id="sets" required="required" placeholder="Please Enter Your sets"/><br/><br />
+            <label>Workout calorie :</label>
+            <input type="text" name="calorie" id="calorie" required="required" placeholder="Please Enter Your workout's calorie"/><br/><br />
+            <input type="submit" value=" Submit " name="submit"/><br />
+        </form>
+    </div>

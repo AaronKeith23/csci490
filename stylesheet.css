@@ -8,30 +8,25 @@ header {
     background-color:  indianred;
     text-align: center;
 }
-
 h1 {
     background-color: indianred;
     font-weight: bold;
     color:  black;
 }
-
 nav{
     background-color: Red;
     text-align: center;
     color: grey;
 }
-
 nav a:visited {
     color: White;
     text-decoration: none;
 }
-
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
-
 a:visited {
     color: blue;
 }

@@ -1,12 +1,7 @@
 <?php
-/**
- * Created by PhpStorm
- * User: aaronkeith
- * Date: 9/29/2019
- * Time: 6:55 PM
- */
 session_start();
-
+error_reporting(E_ALL);
+ini_set('display_errors','1');
 require_once "connection.php";
 require_once "functions.php";
 ?>

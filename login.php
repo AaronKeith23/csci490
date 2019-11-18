@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm
- * User: aaronkeith
- * Date: 9/29/2019
- * Time: 6:55 PM
- */
 $pagetitle = "Login";
 include_once "header.php";
 
@@ -30,7 +24,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
         //confirm the account is correct
         try
         {
-            $sqlusers = "SELECT * FROM workacount WHERE username = :username";
+            $sqlusers = "SELECT * FROM workoutaccount WHERE username = :username";
             $stmtusers = $pdo->prepare($sqlusers);
             $stmtusers->bindValue(':username', $formdata['username']);
             $stmtusers->execute();
@@ -45,8 +39,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
                     echo 'Successfully Login...';
                     $_SESSION['id'] = $row['id'];
                     $_SESSION['username'] = $row['username'];
-                    header('Location: storage.php');
-                    header('Location: storage.php');
+                    header('Location: displayarmworkout.php');
                     $showform = 0;
                 } else {
                     echo "<p class='error'>The username and password combination you entered is not correct.  Please try again.</p>";

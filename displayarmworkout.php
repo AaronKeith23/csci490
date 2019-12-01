@@ -29,7 +29,7 @@ include_once "header.php";
 </head>
 
 <body>
-<a href="addworkout.php">Add New Armworkout</a><br/><br/>
+<a href="addarm.html">Add New Armworkout</a><br/><br/>
 
 
 <?php

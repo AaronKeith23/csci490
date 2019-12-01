@@ -15,9 +15,15 @@
 $pagetitle = "Display Chest Workout";
 
 include_once "header.php";
+?>
+<html>
+<head>
+    <title>Homepage</title>
+</head>
 
-
-
+<body>
+<a href="addchest.html">Add New Chestworkout</a><br/><br/>
+<?php
 try{
 
     //query the data

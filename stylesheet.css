@@ -1,8 +1,11 @@
 img {
     border-radius: 50%;
 }
+table, th, td {
+    border: 1px solid black;
+}
 body {
-    background-color:  dimgrey;
+    background-color:  grey;
 }
 header {
     background-color:  indianred;
@@ -38,6 +41,9 @@ footer{
     color: red;
     text-align: center;
 
+}
+th{
+    font-size: 15px;
 }
 .error {
     color: red;

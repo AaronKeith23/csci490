@@ -57,7 +57,7 @@ if(isset($_POST['Submit'])) {
 }
 ?>
 <form action="addarmworkout.php" method="post" name="addarmworkout">
-    <table width="25%" border="0">
+    <table>
         <tr>
             <td>WorkoutName</td>
             <td><input type="text" name="workoutname"></td>

@@ -8,7 +8,7 @@ include_once "header.php";
 <fieldset>
     <legend>New Leg Workout</legend>
 <form action="addlegworkout.php" method="post" name="addlegworkout">
-    <table width="50">
+    <table width="30%">
         <tr>
             <td>Workout Name</td>
             <td><input type="text" name="workoutname"></td>

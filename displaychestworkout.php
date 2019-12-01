@@ -16,7 +16,7 @@ try{
             <tr><th>Workout Name</th><th>Reps</th><th>Sets</th><th>Calories</th><th>Action</th></tr>";
     //loop through the results and display to the screen
     foreach ($result as $row){
-        echo "<tr><td>{$row['workoutname']}</td><td>" .$row['reps']."</td><td>" .$row['sets']."</td><td>{$row['calories']}</td><td><a href=\"add.php?workoutname=$row[workoutname] & reps=$row[reps] & sets=$row[sets] & calories=$row[calories]\" onClick=\"return confirm('Are you sure you want to add this workout?')\">Add workout</a></td>"; "</tr>";
+        echo "<tr><td>{$row['workoutname']}</td><td>" .$row['reps']."</td><td>" .$row['sets']."</td><td>{$row['calories']}</td><td><a href=\"add.php?workoutname=$row[workoutname] & reps=$row[reps] & sets=$row[sets] & calories=$row[calories]\" onClick=\"return confirm('Are you sure you want to add this workout?')\">Add Workout</a></td>";"</tr>";
     }
     echo "</table>";
 }

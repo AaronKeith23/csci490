@@ -18,3 +18,32 @@ $query->execute();
 //$query->execute(array(':id' => $id));
 //redirecting to the display page (allwork.php in our case)
 header("Location:allwork.php");
+?>
+<a href="allwork.php">Back</a>
+<br/><br/>
+
+<form action="addworkout.php" method="post" name="addworkout">
+    <table width="25%" border="0">
+        <tr>
+            <td>Workout Name</td>
+            <td><input type="text" name="workoutname"></td>
+        </tr>
+        <tr>
+            <td>Workout Reps</td>
+            <td><input type="text" name="reps"></td>
+        </tr>
+        <tr>
+            <td>Workout Sets</td>
+            <td><input type="text" name="sets"></td>
+        </tr>
+        <tr>
+            <td>Calorielist</td>
+            <td><input type="text" name="calorielist"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" name="Submit" value="Add"></td>
+        </tr>
+    </table>
+</form>
+</body>

@@ -10,7 +10,7 @@ include_once "header.php";
 <fieldset>
     <legend>New Arm Workout</legend>
     <form action="addarmworkout.php" method="post" name="addarmworkout">
-        <table width="25%" border="0">
+        <table width="30%">
             <tr>
                 <td>Workout Name</td>
                 <td><input type="text" name="workoutname"></td>

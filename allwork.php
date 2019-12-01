@@ -12,6 +12,7 @@ require_once 'header.php';
         <td>Workout Name</td>
         <td>Reps</td>
         <td>Sets</td>
+        <td>Calories</td>
         <td>Action</td>
     </tr>
     <?php

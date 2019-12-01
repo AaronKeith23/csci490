@@ -43,7 +43,7 @@ if(isset($_POST['Submit'])) {
 
 
         //display success message
-        echo "<span style=\"color: green; \">Data added successfully.";
+        echo "Data added successfully!";
         echo "<br/><a href='displaylegworkout.php'>View Result</a>";
     }
 }

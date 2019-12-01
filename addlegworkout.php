@@ -1,9 +1,3 @@
-<html>
-<head>
-    <title>Add Data</title>
-</head>
-
-<body>
 <?php
 //including the database connection file
 include_once("connection.php");
@@ -14,8 +8,6 @@ $formdata['sets'] = trim($_POST['sets']);
 $formdata['calories'] = trim($_POST['calories']);
 
 if(isset($_POST['Submit'])) {
-
-
     // checking empty fields
     if(empty($formdata['workoutname']) || empty($formdata['reps']) || empty($formdata['sets'] )||empty($formdata['calories'])) {
 

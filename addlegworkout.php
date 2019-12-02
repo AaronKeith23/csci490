@@ -1,6 +1,7 @@
 <?php
 //including the database connection file
 include_once("connection.php");
+$pagetitle = "Add Leg Workout";
 require_once 'header.php';
 $formdata['workoutname'] = trim($_POST['workoutname']);
 $formdata['reps'] = trim($_POST['reps']);
